@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            *{
+                margin: 0px;
+            }
+            /* 0~799px */ 
+            @media screen and (max-width:767px) {
+                #menu>div{
+                    background-color: gray;
+                    border-radius: 5px;
+                    width: 30px;
+                    height: 30px;
+                    margin: 10px 5px;
+                }
+                #menu>div>span{
+                    border: 1px solid black;
+                    display: block;
+                    margin: 5px 0px;
+                }
+                #menu{
+                    background-color: darkgray;
+                    width: 100%;
+                    height: 50px;
+                    position: fixed;
+                    top:0px;
+                    left: 0px;
+                }
+                ul{
+                    position: absolute;
+                    top: 50px;
+                    list-style:none;
+                    padding: 0px;
+                    width: 100%;
+                }
+                li{
+                    width: 100%;
+                    height: 50px;
+                    background-color: gray;
+                    
+                }
+            }
+            /* 768px~991px */
+            @media screen and (min-width:768px) and (max-width:991px){
+                #menu{
+                    background-color: darkgray;
+                    width: 100%;
+                    height: 50px;
+                    position: fixed;
+                    top:0px;
+                    left: 0px;
+                }
+                ul{
+                    position: absolute;
+                    top: 50px;
+                    list-style:none;
+                    padding: 0px;
+                    width: 100%;
+                }
+                li{
+                    width: 50%;
+                    float: left;
+                    height: 50px;
+                    background-color: gray;
+                    
+                }
+            }
+            /* 992px~ */
+            @media screen and (min-width:992px) {
+                ul{
+                    list-style: none;
+                    padding: 0px;
+                }
+                ul>li{
+                    width: 100px;
+                    height: 50px;
+                    background-color: gray;
+                    float: left;
+                }
+                #menu{
+                    background-color: darkgray;
+                    width: 100%;
+                    height: 50px;
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <div><span></span><span></span><span></span></div>
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+                <li>menu6</li>
+            </ul>
+        </div>
+    </body>
+</html>

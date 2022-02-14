@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            body>div{
+                width: 800px;
+                margin: 0px auto;
+            }
+            #header{}
+            #header>h1{
+                text-indent: -999px;
+                background-image: url("img01.png");
+                background-repeat: no-repeat;
+                height: 100px;
+            }
+            #menu{
+                height: 30px; 
+                position: relative;
+            }
+            #menu>ul{
+                list-style: none;
+                padding: 0px;
+                width: 400px;
+                margin: 0px auto;
+                height: 50px;
+                position: absolute;
+            }
+            #menu>ul>li{
+                width: 100px;
+                background-color: gray;
+                float: left; /*옆으로 올 수 있도록*/
+                text-align: center;
+                color: white;
+                height: 25px;
+                transition-duration: 1s;
+            }
+
+            #menu>ul>li:hover{
+                height: 120px;
+            }
+
+            #menu>ul>li>ol{
+                list-style: none;
+                padding: 0px;
+            }
+            #menu>ul>li>ol>li{
+                text-align: center;
+                color: white;
+            }
+
+            #content{
+                clear: both;
+            }
+            #footer{
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="header">
+                <h1>하이미디어</h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2
+                        <ol>
+                            <li>menu2-1</li>
+                            <li>menu2-2</li>
+                            <li>menu2-3</li>
+                            <li>menu2-4</li>
+                        </ol>
+                    </li>
+                    <li>menu3
+                        <ol>
+                            <li>menu3-1</li>
+                            <li>menu3-2</li>
+                            <li>menu3-3</li>
+                            <li>menu3-4</li>
+                        </ol>
+                    </li>    
+                    <li>menu4</li>
+                </ul>
+
+            </div>
+            <div id="content">
+                사법권은 법관으로 구성된 법원에 속한다. 대한민국의 국민이 되는 요건은 법률로 정한다. 
+                대통령으로 선거될 수 있는 자는 국회의원의 피선거권이 있고 선거일 현재 40세에 달하여야 한다. 
+                모든 국민은 종교의 자유를 가진다. 형사피해자는 법률이 정하는 바에 의하여 당해 사건의 재판절차에서 진술할 수 있다.
+                헌법재판소 재판관은 정당에 가입하거나 정치에 관여할 수 없다. 
+                감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다. 
+                모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.
+            </div>
+            <div id="footer">copyright </div>
+        </div>   
+    </body>
+</html>

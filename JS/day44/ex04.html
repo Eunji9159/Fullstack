@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            div{
+                background-color: yellow;
+                width: 200px;
+                height: 100px;
+            }
+            button{
+                display: block;
+                margin: 0px auto;
+            }
+        </style>
+        <script type="text/javascript">
+            // onload부터 잡아야되니까 항상 onload부터 시작해야 함.
+            // 바깥에서 선언을 해주면 콘솔에 찍어볼 수 있으니까 편함.
+            var h1,btn,div;
+            window.onload=function(){
+                btn=document.querySelector('button');
+                div=document.querySelector('div');
+                // btn.onlick=function(){
+                //     console.log('클릭');
+                // };
+                // btn.ondlclick=function(){
+                //     console.log('더블클릭');
+                // };
+
+                // // # mouse event는 'element'를 기준으로 일어나고 있음!#
+                // btn.onmouseup=function(){
+                //     console.log('mouse press'); // 
+                // };
+                // //버튼을 누른상태에서 바깥쪽에서 손뗐을 때
+                // btn.onmousedown=function(){
+                //     console.log('mouse down'); // mouseup은 버튼을 누르고 뗐을 때
+                // };
+
+                // div.onmouseover=function(){// 위에 마우스 올렸을 때
+                //     console.log('div mouseover');
+                // };
+                // div.onmouseout=function(){ // 마우스 떼었을 때
+                //     console.log('div mouseout');
+                // };
+                // btn.onmouseover=function(){// 위에 마우스 올렸을 때
+                //     console.log('btn mouseover');
+                // };
+                // btn.onmouseout=function(){ // 마우스 떼었을 때
+                //     console.log('btn mouseout');
+                // };
+               
+                div.onmouseenter=function(){ 
+                    console.log('div mouseover2');
+                };
+                div.onmouseleave=function(){ 
+                    console.log('div mouseout2');
+                };
+                btn.onmouseenter=function(){ 
+                    console.log('btn mouseover2');
+                };
+                btn.onmouseleave=function(){ 
+                    console.log('btn mouseout2');
+                };
+            };
+
+        </script>
+    </head>
+    <body>
+        <h1>마우스 이벤트</h1>
+        <div>
+        <button>버튼</button>
+        </div>
+   </body>
+</html>

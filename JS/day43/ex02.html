@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            // ■ BOM(Browser Object Model)
+            // window 객체
+            // - window, screen, location, history, navigator
+            // 보안 상으로만 존재하는 것이라고만 알고, 실제로 쓰진 말자.
+            var frame;
+            function func01(){
+            // ▶ window 
+            //  - window.open()
+            //    open()메서드는 새로운 윈도우를 만들어 주는 메서드이다.
+                frame=window.open("http://m.naver.com","_blank","toolbar=yes,scrollbars=yes,resizable=no,top=500,left=500,width=400,height=400"); 
+                                                       // ㄴ새 창열기                        // ㄴ사이즈 조정
+                }
+                function func02(){
+                frame.close();
+                }
+            //  window창을 오픈해서 frame에 담음. -> 윈도우의 새 창을 열어줌
+            //  - window.moveTo() -  새로 열린 그 창으로 이동
+            //  - window.resizeTo() -  새로 열린 '그 창'의 사이즈 조절
+            //  - window.innerHeight; - 현재 창.(기본으로 뜨는)윈도우 창에서 안쪽 영역 높이
+            //  - window.innerWidth;                        ``                      너비
+            //  - window.outerHeight; - 현재 창.(기본으로 뜨는)윈도우 창 전체영역 높이 
+            //  - window.outerWidth;                         ``                너비
+                
+            // ▶ window Screen(스크린화면)
+            //  - window.screen.height
+            //  - window.screen.availHeight (위와 차이는?= 화면하단 작업표시줄 차지한 영역)
+                
+            // ▶ window location(주소)
+            //  - 프로퍼티, 주소 존재
+            //  - location reload(); / location replace();    
+            //   : 현재 페이지 재로드   : url값으로 이동
+
+            // ▶ window history
+            //   : 페이지가 이동한 정보를 관리
+            //  - back(); : 이전 페이지(뒤로)로 이동
+            //  - forward(); : 이후 페이지(앞으로)로 이동
+            //  - go(); : ()값에 따라 양수이면 이후 페이지(앞으로) 이동
+            //                        음수이면 이전 페이지(뒤로) 이동 
+
+           // ▶ navigator(브라우저)
+           //   : 브라우저 정보에 관한 객체
+
+        </script>
+    </head>
+    <body>
+        <button onclick="func01();">open</button>
+        <button onclick="func01();">close</button>
+    </body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>list</h1>
+        <ul>
+            <li>item1</li>
+            <li>item1</li>
+        </ul>
+        <input type="text" id="ele1"/>
+        <button onclick="func01();">입력</button>
+        <script type="text/javascript">
+            var input=document.querySelector('#ele1');
+            var ul=document.querySelector('ul');
+
+            function func01(){
+                var msg=input.value;
+                ul.innerHTML+='<li>'+msg+'<li>';
+                input.value='';
+            }
+        </script>
+    </body>
+</html>

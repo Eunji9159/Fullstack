@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <!-- 문법 끝, element의 종류들 -->
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            // 수행되는 시점은 window가 로딩이 끝났을 때. onload
+            window.onload=function(){
+                alert('loading end..');
+                console.log('window loading end...');
+            };
+            //html문서 로딩 전에 보여줘라.
+            //reloading=새로고침. 새롭게 창 열림, 여는 순간 새롭게 열린다.
+            //onload가 되어야 unload가 가능하니까, unload시점 전
+            window.onbeforeunload=function(){
+                console.log('window reloading 전...');
+            }
+            var cnt=0;
+            // 창 사이즈가 조정된다. 콜백함수
+            window.onresize=function(){
+                console.log('사이즈 조정',cnt++);
+            }
+            // data의 loading이 완료되는 시점.
+            doocument.onloadeddata=function(){
+                console.log('data loading...');
+            }
+        </script>
+    </head>
+    <body>
+        <h1>window event</h1>
+    </body>
+
+</html>

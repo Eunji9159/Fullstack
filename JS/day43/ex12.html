@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            body>div{
+                margin: 0px auto; /*가운데 정렬*/
+                width: 800px;
+            }
+            body>div:nth-child(2),body>div:nth-child(4){
+                background-color: gray;
+                text-align: center;
+            }
+            body>div:nth-child(2)>a{
+                display: inline-block;
+                width: 100px;
+                height: 50px;
+                background-color: darkgray;
+                color: white;
+                line-height: 50px;
+                text-decoration: none;
+            }
+            img{
+                display: none;
+            }
+            .banner{
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>하이미디어</h1>
+        </div>
+        <div>
+            <a href="#">menu1></a>
+            <a href="#">menu2></a>
+            <a href="#">menu3></a>
+            <a href="#">menu4></a>
+        </div>
+        <div>
+            <div id="carousel">img rolling</div>
+        </div>
+        <div>
+            copyright ⓒHimedia Academy, All Rights Reserved.
+        </div>
+        <script type="text/javascript">
+            var carousel=document.querySelector('#carousel');
+            var cnt=0;
+            function show(){
+                var num=cnt<6?cnt++:cnt=0;
+                carousel.innerHTML='';
+                for(var i=0; i<6; i++){
+                    imgs(num,i);
+                }
+            }
+            /*if(num==0) banner='banner';
+            else banner='';
+            carousel.innerHTML='<img class="'+banner+'" src="imgs/big0'+(num+1)+'.jfif"/>';
+            if(num==1) banner='banner';
+            else banner='';
+            carousel.innerHTML+='<img class="'+banner+'" src="imgs/big02.jfif"/>';
+            if(num==2) banner='banner';
+            else banner='';
+            carousel.innerHTML+='<img class="'+banner+'"src="imgs/big03.jfif"/>';
+            if(num==3) banner='banner';
+            else banner='';
+            carousel.innerHTML+='<img class="'+banner+'"src="imgs/big04.jfif"/>';
+            if(num==4) banner='banner';
+            else banner='';
+            carousel.innerHTML+='<img class="'+banner+'"src="imgs/big05.jfif"/>';
+            if(num==5) banner='banner';
+            else banner='';
+            carousel.innerHTML+='<img class="'+banner+'"src="imgs/big06.jfif"/>';
+            }
+            */
+           
+            function imgs(num,num2){
+                var banner=(num==num2)?'banner':'';
+                carousel.innerHTML+='<img class="'+banner+'" src="imgs/big0'+(num2+1)+'.jfif"/>';
+            }
+           
+           
+                                           
+            /*function imgs(num1,num2){
+                var banner;
+                if(num==2) banner='banner';
+                else banner='';
+                carousel.innerHTML+='<img class="'+banner+'" src="imgs/big0'+(num2+1)+'.jfif"/>';
+            }*/
+        </script>
+    </body>
+</html>

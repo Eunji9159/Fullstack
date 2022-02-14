@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            //내장객체
+            // var a=parseInt('1111');
+            // console.log(a+1);
+            var obj;
+            var cnt=0;
+            var callback=function(){
+                console.log(new Date());
+                // obj=setTimeout(callback,1000);
+                cnt++;
+            };
+            obj=setTimeout(callback,1000);
+            console.log(cnt);
+
+            // var callback=function(){
+            //     console.log(new Date());
+            //     setTimeout(callback,1000);
+            // };
+            // var obj=setInterval(callback,1000);
+            // setTimeout(function(){
+            //     clearInterval(obj);
+            // },5000);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

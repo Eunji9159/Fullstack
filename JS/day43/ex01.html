@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var obj={};
+            window.console.log(obj);
+            // window.console.log('메시지');
+            // window.alert('메시지2'); // 'alert'창 :확인을 누르기 전에 다음 코드로 넘어가지 않음.
+                                       // document가 아니기 떄문에 alert창은 개행(<br/>)불가함. 개행문자(\n)를 넣어주어야 가능
+            // var a=window.confirm('확인하시겠습니까?');
+            // console.log(a); // confirm : 확인/취소. 확인클릭 -> true / 취소클릭-> false
+            var b=window.prompt('메시지','기본값'); // 사용자의 입력을 받기/ '기본값' : 초기값으로 뜸
+            console.log(b); // 값을 입력하지 않으면 null이나 undefine이 아닌 빈문자열로 뜸. but,'취소'를 누르면 'null'로 나옴
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

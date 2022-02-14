@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8">
+        <style rel="stylesheet" type="text/css">
+            body{
+                background-color: black;
+            }
+            h1{
+                text-indent: -9999px;
+                background-image: url("img01.png");
+                height: 100px;
+                background-repeat: no-repeat;
+                color: yellow;
+            }
+            p{
+                color: white;
+            }
+            @media print{ /*media query종류(4가지) all,print,screen,speech*/
+                body{
+                    background-color: white;
+                }
+                h1{
+                    color:black;
+                }
+            }
+            @media speech {
+                h1{
+                text-indent: -9999px;
+                background-image: url("img01.png");
+                height: 100px;
+                background-repeat: no-repeat;
+                color: yellow;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>제목</h1>
+        <p>다음을 읽어줄겁니다</p> 
+    </body>
+</html>

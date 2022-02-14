@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="test04.css">
+        <style rel="stylesheet" type="text/css">
+            /*
+            선택자{속성:값;속성:값;}
+            tag selector(태그 선택자)       tag
+            id selector(id 선택자)          #id
+            class selector(클래스 선택자)   .class
+            
+            우선순위
+            inline > id > class > tag
+            */
+
+            p{
+                color:blue;
+            }
+            .p2{
+                color:magenta;
+            }
+            #p3{
+                color:green;
+            }
+           
+        </style>
+       
+
+
+    </head>
+    <body>
+        <h1 style="color:red">대제목</h1>
+        <p>설명</p>
+        <h2 class="p2">css</h2>
+        <p class="p2" id="p3">style을 설정합니다</p>
+        <h3>방식1</h3>
+        <p>inline방식</p>
+        <h3>방식2</h3>
+        <p class="p2 p4">style에 명세</p>
+        <h3>방식3</h3>
+        <p class="p4">외부파일로 명세</p>
+    </body>
+</html>

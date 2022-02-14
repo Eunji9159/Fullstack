@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+var h1,input,btn,div; // 선언 시에 스크립트 공격에 취약함
+window.onload=function(){
+    input=document.querySelector('input');
+    btn=document.querySelector("button");
+    div=document.querySelector('#result');
+    input.onkeydown=function(e){
+        console.log('key down',input.value,e.keyCode,e.charCode,e.key);
+    };
+    input.onkeyup=function(e){
+        console.log('key up',input.value,e.keyCode,e.charCode,e.key); // up: 실제 값을 가지고 있는 시점
+
+    };
+    input.onkeypress=function(e){
+        console.log('key press',input.value,e.keyCode,e.charCode,e.key); //퍼포먼스가 일어날 당시, 실질적으로 값이 들어가는 단계
+    };
+};
+        </script>
+    </head>
+    <body>
+        <!-- 키보드 이벤트 -->
+        <h1>key event</h1>
+        <input type="text"/>
+        <button>btn</button>
+        <div id="result"></div>
+    </body>
+</html>

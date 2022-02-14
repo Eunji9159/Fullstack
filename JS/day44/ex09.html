@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var loading=function(){
+                console.log('loading...');
+            };
+
+           window.onload=loading; //load는 level2 사용!(level3가 아님)
+                                // 문서의 로딩시점에 하려고 하니까. 단,다른 이벤트에서는 상관없이 씀.
+           //window.addEventListener('load',loading);//(이벤트 종류, 콜백)
+        </script>
+    </head>
+    <body>
+        <h1>DOM Level3 event</h1>
+
+    </body>
+</html>

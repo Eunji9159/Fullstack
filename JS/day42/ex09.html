@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var arr1=[2,6,8,4];
+            arr1.push(9);
+            console.log(arr1);
+
+            var callback=function(a,b){
+                return b-a;
+            }
+
+           arr1.sort(callback);
+           console.log(arr1.toString());
+           console.log('---------------------------------');
+           var sum = arr1.reduce(myFunction);
+
+           console.log("The sum is "+sum);
+
+           function myFunction(total, value, index, array) {
+            console.log('total:',total);
+           return total + value;
+           }
+           console.log('---------------------');
+           myArr = Array.from("ABCDEFG");
+           console.log(typeof myArr,myArr);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

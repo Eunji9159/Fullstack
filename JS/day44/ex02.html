@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            // 결국 h1을 잡을 수 있어야지 이벤트를 할 수 있다.
+            // 윈도우 객체로부터 로딩이 끝나면 콜백 한다.
+            // 이렇게 적는 방식이 맞다.
+            window.onload=function(){
+                console.log(document.querySelector('h1'));
+                var btn=document.querySelector('button');
+                btn.onclick=function(){ // 이또한 콜백. 콜백이니까 function이름만 붙여주면 됨.
+                                        // 버튼 엘리먼트 객체. 거기에 onclick메서드를 정의를 해주는 것
+                    alert('버튼클릭');
+                }
+            };
+            // function callback(){
+            //     console.log(document.querySelector('h1'));
+            // };
+            // 호출의 시점은 문서가 로딩되는 시점. 함수의 호출은 이벤트가 정의된 시점(window onload)에 js가 알아서 호출을 한다.
+            // window.onload=callback;
+        </script>
+    </head>
+    <body>
+        <h1>DOM Level2 event</h1>
+        <!-- 돔 레벨2 = 엘리먼트에 정의하면 된다. 특징은 on으로 시작하고, 소문자이다 -->
+        <!-- 버튼에도 이벤트 잡아보기 -->
+         <button>btn</button>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            #header{}
+            #header>h1{
+
+            }
+           #menu{
+               background-color: darkgray;
+               height: 40px;
+           }
+           #menu>ul{
+               list-style: none;
+               padding: 0px;
+               background-color: darkgreen;
+               width: 400px;
+               margin: 0px auto;
+           }
+           #menu>ul>li{
+               float: left;
+           }
+           #menu>ul>li>a{
+               width: 100px;
+               height: 40px;
+               display: block;
+               background-color: gray;
+           }
+           #content{
+               clear: lboth;
+           }
+       </style>
+    </head>
+    <body>
+        <div id="header">
+        <h1>하이미디어</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </div>
+        <div id="content">section</div>
+        <div class="article">aside</div>
+        <div id="footer">footer</div>
+   </body>
+</html>

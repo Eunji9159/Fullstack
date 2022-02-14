@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <div>
+            <h1>하이미디어</h1>
+        </div>
+        <div>
+            <a href="#">menu1></a>
+            <a href="#">menu2></a>
+            <a href="#">menu3></a>
+            <a href="#">menu4></a>
+        </div>
+        <div>
+            <div id="carousel">img rolling</div>
+        </div>
+        <div>
+            copyright ⓒHimedia Academy, All Rights Reserved.
+        </div>
+        <script type="text/javascript">
+            var carousel=document.querySelector('#carousel');
+            var cnt=1;
+            carousel.innerHTML='<img src="imgs/big0'+cnt+'.jfif"/>'
+
+            function rolling(){
+                cnt++;
+                if(cnt>6){
+                    cnt=1;
+                }
+                carousel.innerHTML='<img src="imgs/big0'+cnt+'.jfif"/>'
+            }
+            setInterval(rolling,1000);
+        </script>
+    </body>
+</html>

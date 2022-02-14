@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            .container{
+                width: 800px;
+                margin: 0px auto;
+            }
+            #header h1{
+                background-image: url('imgs/logo.png');
+                background-repeat: no-repeat;
+                height: 100px;
+                text-indent: -9999px;
+            }
+            #menu,#footer{
+                background-color: gray;
+            }
+            .banner{
+                width: 600px;
+                height: 200px;
+                overflow: hidden;
+                margin: 0px auto;
+                position: relative;
+            }
+            .banner img{
+                width: 200px;
+            }
+            .banner>ul{
+                list-style: none;
+                padding: 0px;
+                width: 1200px;
+            }
+            .banner>ul>li{
+                float: left;
+            }
+            .banner>ul>li>img{}
+            .banner>a{
+                position: absolute;
+                left: 0px;
+                top:75px;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-color: black;
+                border-radius: 25px;
+                text-align: center;
+                line-height: 40px;
+                color: white;
+                text-decoration: none;
+                font-size: 30pt;
+                font-weight: bold;
+                opacity: 0.3;
+            }
+            .banner>a:last-child{
+                left: 550px;
+            }
+            #menu>div{
+                /* overflow: hidden; */
+                height: 50px;
+            }
+            #menu ul{
+                position: relative;
+                list-style: none;
+                padding: 0px;
+                width: 400px;
+                margin: 0px auto;
+            }
+            #menu ul>li{
+                float: left;
+            }
+            #menu ul>li>a{
+                display: block;
+                width: 100px;
+                height: 50px;
+                background-color: darkgray;
+                text-align: center;
+                color: white;
+                line-height: 50px;
+                text-decoration: none;
+            }
+            #menu ul>li>ol{
+                position: absolute;
+                list-style: none;
+                padding: 0px;
+                z-index: 50;
+                overflow: hidden;
+            }
+            #menu ul>li>ol>li{}
+            #menu ul>li>ol>li>a{
+                width: 100px;
+                background-color: darkgray;
+                display: block;
+                height: 50px;
+                text-align: center;
+                color: white;
+                line-height: 50px;
+                text-decoration: none;
+            }
+        </style>
+        <script type="text/javascript">
+            var banner,imgs,aprev,anext,ul,menu2,menu3;
+            window.onload=function(){
+                banner=document.querySelector('.banner');
+                imgs=document.querySelectorAll('.banner img');
+                banner.innerHTML+='<a href="#">&lt;</a><a href="#">&gt;</a>';
+                menu2=document.querySelectorAll('#menu ul>li')[1];
+                menu3=document.querySelectorAll('#menu ul>li')[2];
+                menu2.querySelector('ol').style.height='0px';
+                menu3.querySelector('ol').style.height='0px';
+                var menuOver=function(){
+                    this.querySelector('ol').style.height='200px';
+                };
+                var menuOut=function(){
+                    this.querySelector('ol').style.height='0px';
+                };
+                menu2.onmouseover=menuOver;
+                menu3.onmouseover=menuOver;
+                menu2.onmouseout=menuOut;
+                menu3.onmouseout=menuOut;
+
+                ul=banner.querySelector('ul');
+                aprev=document.querySelectorAll('.banner>a')[0];
+                anext=document.querySelectorAll('.banner>a')[1];
+                aprev.onclick=function(){
+                    ul.prepend(ul.lastElementChild);
+                    return false;
+                };
+                anext.onclick=function(){
+                    ul.append(ul.firstElementChild);
+                    return false;
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="header" class="row">
+                <div class="grid12">
+                    <h1>하이미디어</h1>
+                </div>
+            </div>
+            <div id="menu" class="row">
+                <div class="grid12">
+                    <ul>
+                        <li><a href="#">item1</a></li>
+                        <li><a href="#">item2</a>
+                            <ol>
+                                <li><a href="#">item2-1</a></li>
+                                <li><a href="#">item2-2</a></li>
+                                <li><a href="#">item2-3</a></li>
+                                <li><a href="#">item2-4</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">item3</a>
+                            <ol>
+                                <li><a href="#">item3-1</a></li>
+                                <li><a href="#">item3-2</a></li>
+                                <li><a href="#">item3-3</a></li>
+                                <li><a href="#">item3-4</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">item4</a></li>
+                    </ul>    
+                    
+                </div>
+            </div>
+            <div id="content" class="row">
+                <div class="grid12">
+                    <div class="banner">
+                        <ul>
+                            <li><img src="imgs/thumb01.jfif" /></li>
+                            <li><img src="imgs/thumb02.jfif" /></li>
+                            <li><img src="imgs/thumb03.jfif" /></li>
+                            <li><img src="imgs/thumb04.jfif" /></li>
+                            <li><img src="imgs/thumb05.jfif" /></li>
+                            <li><img src="imgs/thumb06.jfif" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="row">
+                <div class="grid12">
+                    <address>
+                        <p>(주) 하이미디어 아카데미</p>
+        &copy; by Himedia Academy. All Rights Reserved.
+                    </address>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

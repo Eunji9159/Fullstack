@@ -1,0 +1,127 @@
+[20222204 수업내용]
+
+*= ㅇㅇ을 포함하고 있는
+
+가장 많이 쓰이는 선택자
+[attribute^=value]	a[href^="https"]	Selects every <a> element whose href attribute value begins with "https"
+[attribute$=value]	a[href$=".pdf"]	Selects every <a> element whose href attribute value ends with ".pdf"
+[attribute*=value]	a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+
+
+div<label:first-child 
+ 해석 : div에 첫번째 자식으로 라벨이 왔을 때
+
+앵커(a)의 특징 : 한번도 방문 안했다면 파란색, 한번이라도 방문했다면 보라색 적용됨.
+
+적용 순서(지켜야함)
+a:link{color:red;} -- 순서 딱히 상관없음
+a:visited{color:green;} /*한번 방문하면*/
+a:hover{color:black;} /*마우스 갖다대면*/
+a:active{color:blue;} /*순간*/
+
+element특성
+# 박스레벨 / 인라인 레벨
+- div 와 span 은 그저 묶어주는 기능. 
+- 인라인 레벨은 높이(height),너비(width) 적용X
+
+단위 명세 필수
+
+
+[박스 레이아웃]
+
+# margin (여백)
+
+margin-top: 0px;
+margin-bottom: 0px;
+margin-right: 0px;
+margin-left: 0px;
+           
+margin: 0px --> 사방 모두
+margin: 0px	   0px; 
+	위,아래   좌,우
+margin: 0px 0px 0px 0px;  --> 위,아래,좌,우
+
+
+# border (외곽라인)
+
+border-width: 1px;   (두께)
+border-color: black; (색상)
+border-style: solid; (라인의 종류)
+
+ * 세가지 속성이 한쌍으로 함께 쓰여야 함.
+
+
+[색]
+- CSS에서 색을 표현하는 방법
+1. 색상 이름(영문)으로 표현
+2. RGB 색상값으로 표현
+3. 16진수 색상값으로 표현
+
+
+[텍스트]
+- text-align
+  - text-align: center
+  - text-align: left
+  - text-align: right
+- text-decoration (텍스트에 밑줄을 긋거나 가로지르는 줄 표시)
+  - text-decoration: overline;
+  - line-through (중간줄)
+  - underline
+  - underline overline (위아래 줄)
+- text-transform (영문 텍스트의 대문자나 소문자를 바꾸는 속성)
+  - text-transform: uppercase
+  - text-transform: lowercase
+  - text-transform: capitalize
+- text Spacing
+  - text-indent (문단의 첫 글자 들여쓰기)
+  - letter-spacing (자간 간격 띄우기)
+  - line-height (행간)
+  - word-spacing (단어 간)
+  - white-space (한 줄씩 출력)
+- text-shadow
+  - text-shadow: 2px 2px (위, 아래)
+
+
+[폰트]
+- font-family
+- font-style
+  - font-style: normal
+  - font-style: italic  (기울어짐/ 기울어진 글꼴이 처음부터 디자인됨)
+  - font-style: oblique (기울어짐/ 원래 글꼴을 단지 기울어지게)
+- font-weight (두껍게)
+  - font-weight: normal
+  - font-weight: normal
+  - font-weight: bold
+- font-variant (대문자를 소문자 크기에 맞춰서 작게 표시)
+  - font-variant: normal
+  - font-variant: small-caps (작은 대문자로 표시)
+- font-size
+  - 단위(3가지) px,     pt,       em
+		해상도  폰트단위  비율
+- font Google
+ 웹폰트: 웹 문서 안에 글꼴 정보 함께 저장했다가 사용자가 웹 문서에 접속하면 글꼴을 사용자 시스템으로 다운로드시켜 사용하는 글꼴
+ 제일 마지막 글꼴은 항상 기본적인, 모두가 가지고 있는 폰트를 넣어야함. 
+
+
+[리스트]
+-list-style-type (순서 없는 목록의 불릿이나 순서 목록의 숫자를 바꾸는 속성)
+  - list-style-type: circle;
+  - list-style-type: square;
+  - list-style-type: upper-roman;
+  - list-style-type: lower-alpha;
+-list-style-image (순서 없는 목록의 불릿을 이미지로 바꾸는 속성)
+
+
+opacity : 투명도
+-------------------------------------------------------------------------------------
+[숙제] 학생성적관리사이트
+
+logo는 학원 로고
+
+footer에 내 이메일달기
+
+
+
+
+
+

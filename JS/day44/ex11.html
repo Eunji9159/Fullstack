@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var btns,div,tf1=true;
+            var callback1=function(){
+                div.innerHTML+='클릭<br/>';
+            };
+            window.onload=function(){
+                btns=document.querySelectorAll('button');
+                div=document.querySelector('div');
+                btns[0].addEventListener('click',callback1);
+                btns[1].addEventListener('click',function(){
+                    btns[0].removeEventListener('click',callback1);
+                });
+                btns[2].addEventListener('click',function(){
+                    
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>버튼이벤트</h1>
+        <button>btn1</button>
+        <button>btn2</button>
+        <button>btn3</button>
+        <button>btn4</button>
+        <button>btn5</button>
+        <div></div>
+    </body>
+</html>

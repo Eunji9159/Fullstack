@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            div{
+                position: absolute;
+                left: 0px;
+                top: 0px;  
+                background-image: url('imgs/imgs/car.png');
+                background-size: 100px;
+                text-indent: -999999999px;
+            };
+        </style>
+        <script type="text/javascript">
+var div;
+window.onload=function(){
+    div=document.querySelector('div');
+    div.style.left='0px';
+    div.style.top='0px';
+    window.onkeydown=function(e){
+        if(e.keyCode==39){
+            div.style.left=parseInt(div.style.left)+5+'px';
+        }else if(e.keyCode==37){
+            div.style.left=parseInt(div.style.left)-5+'px';
+        }else if(e.keyCode==38){
+            div.style.top=parseInt(div.style.top)-5+'px';
+        }else if(e.keyCode==40){
+            div.style.top=parseInt(div.style.top)+5+'px';
+        }
+    };
+};
+        </script>
+    </head>
+    <body>
+        <div>차</div>
+    </body>
+</html>

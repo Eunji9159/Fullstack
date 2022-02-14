@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            body>div{
+                width: 100px;
+                height: 100px;
+                border: 1px solid gray;
+            }
+            body>div:last-child(3){
+                margin: 150px;
+                position: static;
+                position: fixed;
+            }
+            div>div{
+                width: 50px;
+                height: 50px;
+                background-color: gray;
+                position:fixed; /*부모가 absolute일 때는 자식 absolute의 기준이 부모. 
+                                    단, 자식이 realative이면 부모가 뭐든 자기 자리 그대로.
+                                        자식이 fixed이면 '화면 자체'이기 때문에 부모와 상관없이 화면상에 고정.
+                                        부모가 relative이고 자식이 absolute이면 부모기준.. 즉, 부모가 static이 아니면 다 부모를 기준으로 함.
+                                        부모가 relative이고 자식이 absolute이면 내가 원래 있어야 되는 위치 기준으로 하니까 부모가 뭐든 상관없음.
+                                        부모가 fixed 이면 자식이 뭐든 화면에 고정된다. */
+                left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>mix</h1>
+        <div>
+            box1
+        </div>
+        <div>
+            box2
+            <div>box3</div>
+        </div>
+        <br>
+        <br> 
+        <br> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>

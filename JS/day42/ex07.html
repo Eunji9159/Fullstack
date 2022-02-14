@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+var cnt=0;
+function newStu(){
+    cnt++;   
+    var stu={
+        num:1,
+        kor:0,
+        setKor:function(a){this.kor=a;},
+        getKor:function(){return this.kor;}};
+    return stu;
+}
+var arr=[];
+arr.push(newStu());
+arr[0].setKor(90);
+arr.push(newStu());
+arr[1].setKor(80);
+arr.push(newStu());
+arr[2].setKor(70);
+arr.push(newStu());
+arr[3].setKor(60);
+for(var i=0; i<arr.length; i++){
+    var stu=arr[i];
+    console.log(stu.num, stu.getKor());
+}
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

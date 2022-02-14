@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var a;
+            window.onload=function(){
+                a=document.querySelector('a');
+                // a.onclick=function(){
+                //     console.log('엥커 취소');// 엘리먼트 기본 기능 취소
+                //     return false;
+                // };
+                a.addEventListener('click',function(e){
+                    e.preventDefault(); // 엘리먼트 기본 기능 취소
+                    console.log(this);
+                    return false;
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>DOM level2 event 주의사항</h1>
+        <a href="https://m.naver.com">naver</a>
+    </body>
+</html>

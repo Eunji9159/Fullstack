@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+ var form,input,ch1,ch2,ch3,select,btn,alink,div;
+ window.onload=function(){
+    select=document.querySelector('select');
+    input=document.querySelector('input[type="text"]'); // input 중 type이 text인 것을 선택
+    form=document.querySelector('form');
+    btn=document.querySelector('button');
+    // 설정해준 link로 이동 못하게 해줄 거다.
+    alink=document.querySelector('div>a');
+    div=document.querySelector('#result');
+    ch1=document.querySelectorAll('input[type="checkbox"]')[0];
+
+    ch1.onchange=function(){
+        console.log(this,this.value);
+        div.innerText=this.value;
+    };
+    btn.onclick=function(){return false;};
+
+    alink.onclick=function(){
+        // 이제 누르면 구글페이지로 이동
+        this.href="https://google.com";
+        // console.log(this.href);// 이때 this는 자기 자신
+        // return false;
+    };
+    console.log(input);
+    form.onsubmit=function(){//form태그의 작동이벤트인 onsubmit
+        console.log('btn click');
+        if(input.value=='') return false;
+        return true;
+    };
+};           
+        </script>
+    </head>
+    <body>
+        <h1>etc event</h1>
+        <form>
+            <div>id<input type="text" name="id"/></div>
+            <div>
+                <input type="checkbox" name="ch1"/>item1
+                <input type="checkbox" name="ch2"/>item1
+                <input type="checkbox" name="ch3"/>item1
+            </div>
+            <div>
+                <select name="sel">
+                    <option>item1</option>
+                    <option>item2</option>
+                    <option>item3</option>
+                    <option>item4</option>
+                </select>
+            </div>
+            <button type="submit">전송</button>
+        </form>
+        <div>link:<a href="https://m.naver.com">link</a></div>
+        <div id="result"></div>
+    </body>
+</html>

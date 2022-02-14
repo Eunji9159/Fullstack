@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            // 먼저 처리가 되면 밑에 html에는 input태그가 없기 때문에 처리가 안됨.
+            // html이 우선적으로 처리가 되어야함. 그 다음에 스크립트를 넣어줘야하고, 그래서 스크립트를 위로 빼는게 좋은거다.
+            // var input=document.querySelector('input');
+            var input;
+            function loading(){
+                input=document.querySelector('input');
+
+                // 여기에 입력해주면됨. 굳이 html에 밑에 넣을 필요 없이!
+            }
+            function func01(){
+                console.log('버튼 누름:'+input.value);
+            }
+            // button2는 alert창으로.
+            function func02(){
+                alert('버튼 누름:'+input.value);
+            }
+        </script>
+
+    </head>
+    <body inload="loading();">
+        <h1>DOM level 1 event</h1>
+        <!-- 돔레벨 1의 이벤트 이름의 특징 : 'on'이 붙어있다. -->
+        <input type="text /" >
+        <button onclick="func01();">btn1</button>
+        <button onclick="func02()">btn2</button>
+        <button onclick="func01();">btn3</button>
+    </body>
+</html>

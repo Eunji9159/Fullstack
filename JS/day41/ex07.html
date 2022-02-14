@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            // Number
+            var a=3.14; // number타입
+            var b=new Number(3.14); // number타입이면서 object타입(모든객체의 최상위객체)
+            var c=new Number(3.14);
+            var d=b;
+            console.log(a);
+            console.log(typeof a); //number타입
+            console.log(b+1);
+            console.log(typeof b); // number타입이면서 object타입
+            console.log(a==b); // 배열 '값(value)'이 같으니까 결과는 true
+            console.log(a===b); // 타입까지 같진 않으므로 결과는 false
+            console.log(b==c); // 객체에 대한 value 다르니까 결과는 false
+            console.log(b===c);
+            console.log(b==d);
+            var e='200원'; // 처음시작에서부터 숫자까지만 처리. $200은 안됨($이 처음부터 숫자가 아니라서) 결과 600
+            console.log(parseInt(e)*3);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
