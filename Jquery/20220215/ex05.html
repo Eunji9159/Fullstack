@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            ul{
+                list-style: none;
+            }
+            ul>li{
+                float: left;
+            }
+            ul>li>img{
+                width: 100px;
+            }
+            .show{
+                display: block;
+            }
+            .hide{
+                display: none;
+            }
+        </style>
+        <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type="text/javascript">
+    $(function(){
+        var cnt=0;
+        var callback=function(){
+            $('li').css('display','none')
+                    .eq(cnt++).css('display','block');
+            cnt=cnt<6?cnt:0;
+        };
+        var callback2=function(){
+            $('li').addClass('hide');
+            $('li').eq(0).removeClass('hide');
+            cnt=cnt<6?cnt:0;
+        };
+        window.setInterval(callback2,1000);
+    });
+        
+        </script>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li><img scr="imgs/thumb01.jfif"/></li>
+                <li><img scr="imgs/thumb02.jfif"/></li>
+                <li><img scr="imgs/thumb03.jfif"/></li>
+                <li><img scr="imgs/thumb04.jfif"/></li>
+                <li><img scr="imgs/thumb05.jfif"/></li>
+                <li><img scr="imgs/thumb06.jfif"/></li>
+            </ul>
+        </div>
+    </body>
+</html>

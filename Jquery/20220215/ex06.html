@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type="text/javascript">
+            var arr=[]; // 배열 만듦. 규칙성이 없는 것들을 편리하게 제어하기 위해서
+    $(function(){
+        $('div').html('<img src="imgs/thumb01.jfif"/>'); // innerHTML : 태그(이미지)가 보여짐
+        $('li').each(function(idx,ele){// li의 idx(number)만큼 내용을 반복해준다.(number)
+            arr.push($(ele).html()); // function의 기능이 push인건데, 그 배열에 문자열을 담는 것. 위에 있는 array에 push하면 이 문자열이 arraylist에 들어감
+        });
+        var callback=function(){
+        $('div').html(arr[2]);
+        var temp=arr.shift();
+        arr.push(temp);
+        };
+        setInterval(callback,1000);
+        });
+        </script>
+    </head>
+    <body>
+        <h1>html & text</h1>
+
+        <div>
+            <ul>
+                <li><img src="imgs/thumb01.jfif"/></li>
+                <li><img src="imgs/thumb02.jfif"/></li>
+                <li><img src="imgs/thumb03.jfif"/></li>
+                <li><img src="imgs/thumb04.jfif"/></li>
+                <li><img src="imgs/thumb05.jfif"/></li>
+                <li><img src="imgs/thumb06.jfif"/></li>
+            </ul>
+
+        </div>
+    </body>
+</html>

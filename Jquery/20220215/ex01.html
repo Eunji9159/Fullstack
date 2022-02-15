@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                //$('p').last().css('color','red');
+                //$('h1.h2').css('color','red');
+                //$('li:eq(3)').css('color','red');
+                //$('li:even').css('color','red'); // even : 짝수만(인덱스 번호가 아니라 0부터 셌을 때의 짝수)
+                //$('li:odd').css('color','red'); // odd : 홀수만
+                //$('li:lt(3)').css('color','red');
+                //$('li:gt(2)').css('color','red');
+                //$('body>*:not(p)').css('color','red'); // body 아래에 있는 p는 빼고 전부
+                //$('li:has(a)').css('color', 'red); // a 를 가지고 있는 li들
+                //$('li:empty').css('color','red');
+                //$("li:contains('item-2')").css('color','red'); // 'item-2'라는 문자열을 가지고 있는
+                //제이쿼리 잘 쓰기 위해서는 원하는 엘리먼트 잘 잡아내고, 처리하기
+                //제이쿼리의 선택자
+
+                // *filter와 find의 구별 중요*
+                //$('li').find('a'); // find 는 선택된 것들 중에 자식을 뒤져서 a를 찾아내는 것
+                //$('li').filter('a'); // filter 선택된 것들 중에 선별. 선택을 골라내는 것
+            
+            
+                //$('h1').css('color','red'); // css는 setter(값을 주는)의 역할, 인자 두개일때는 jquery객체
+                //▶ jQuery.fn.init [h1, prevObject: jQuery.fn.init(1), context: document, selector: 'h1']
+
+                //$('h1').css('color'); // css는 getter의 역할, 인자 한개일때는 String객체(문자열)
+                //▶ 'rgb(255, 0, 0)'
+            };
+        </script>
+    </head>
+    <body>
+        <h1>jquery</h1>
+        <p>제이쿼리 불러오기</p>
+        <h2>소제목1</h2>
+        <p>내용1</p>
+        <h2>소제목2</h2>
+        <p>내용2</p>
+        <h2>소제목3</h2>
+        <p>내용3</p>
+        <ul>
+            <li>item1-<a href="#">link</a></li>
+            <li>item2-<a href="#">link</a></li>
+            <li>item3-</li>
+            <li id="id4">item4-<a href="#">link</a></li>
+            <li>item5-<a href="#">link</a></li>
+            <li></li>
+            <li>item6-<a href="#">link</a></li>
+        </ul>
+    </body>
+</html>
