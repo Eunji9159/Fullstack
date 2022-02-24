@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // $('button').click(function(){ //클릭
+            //     $('div').append('클릭</br>');
+            // });
+            $('button').click(function(e){ 
+                $('div').append('x:'+e.pageX+',y:'+e.pageY+'</br>');
+            }); // 버튼 내에서 클릭한 위치의 x,y좌표를 볼 수 있다.
+            
+            // $('button').mouseover(function(){
+            //     console.log('over');
+            // });
+
+            // $('button').mouseout(function(){
+            //     console.log('out');
+            // });
+            // $('button').mouseenter(function(){
+            //     console.log('mouse over2');
+            // });
+            // $('button').mouseleave(function(){
+            //     console.log('mouse out2');
+            // });
+
+            $('div').dblclick(function(){
+                $('div').append('doubleclick<br/>');
+            });
+            $('button').mouseup(function(){
+                $('div').append('마우스버튼 up<br/>');
+            });
+            $('button').mousedown(function(){
+                $('div').append('마우스버튼 down<br/>');
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1>마우스 이벤트</h1>
+    <button>btn</button>
+    <div></div>
+</body>
+</html>

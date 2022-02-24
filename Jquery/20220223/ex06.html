@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var callback=function(e){
+                console.log(e.type,e.keyCode,e.key,$('input').val()); // keydown->keypress->keyup순으로 출력됨.
+            };
+            $('input').keydown(callback);
+            $('input').keypress(callback);
+            $('input').keyup(callback);
+            $('input').select(function(){ // scroll해서 select됐을 때.
+                alert($('input').val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>key 이벤트</h1>
+    <input type="text"/>
+</body>
+</html>

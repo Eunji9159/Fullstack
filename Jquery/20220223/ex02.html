@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <stype rel="stylesheet" type="text/css">
+        .carousel{
+            display: none;
+        }
+    </stype>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+var before1;
+$(function(){
+    var callback=function(){// 콜백함수
+    if(before1) $('.carousel').append(before1); // carousel에 before1을 append
+    before1=$('.carousel li').first(); // 1. 제일 첫번째 li를 before1이라고 한다.
+    before1.insertBefore('.carousel'); // 2. carousel이 ul. ul앞에 before1을 insert한다.
+    }
+    setInterval(callback,1000); // 3. 여기에서 1초마다 callback을 호출
+});
+
+    </script>
+</head>
+<body>
+    <div>
+        <ul class="carousel">
+            <li><img src="imgs/thumb01.jfif" alt=""></li>
+            <li><img src="imgs/thumb02.jfif" alt=""></li>
+            <li><img src="imgs/thumb03.jfif" alt=""></li>
+            <li><img src="imgs/thumb04.jfif" alt=""></li>
+            <li><img src="imgs/thumb05.jfif" alt=""></li>
+            <li><img src="imgs/thumb06.jfif" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

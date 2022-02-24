@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            console.log('js onload');
+            hi.onload('ex03.html');
+        };// js에서의 이벤트
+
+        // $(document).onload(function(){
+        //     console.log('jq onload'); //onload의 두가지 역할: '이벤트 or 통신'
+        // }); jquery에서의 이벤트 = dom level3 원리로 작동.
+        $(document).ready(function(){ // onload보다 ready가 앞서서 출력됨. 
+                                     // ready는 데이터 로딩이 완료되고 화면에 그리기 전이라면,
+                                     // onload는 데이터 로딩이 완료되었을 때. 따라서, ready가 좀 더 빠르게 수행된다.
+        
+            console.log('jq ready');
+            document.querySelector('img').onload=function(){
+                console.log('이미지 로딩완료');
+            };
+        }); 
+        $(function(){
+            console.log('jq ready2');
+
+        }); 
+        $(function(){
+            console.log('jq ready3');
+        }); 
+    </script>
+</head>
+<body>
+        <h1>이벤트</h1>
+</body>
+</html>

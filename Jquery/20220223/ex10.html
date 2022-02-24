@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style rel="stylesheet" type="text/css">
+        div{
+            width: 300px;
+            height: 50px;
+            background-color: rgb(255,0,0);
+        }
+        div>div{
+            width: 200px;
+            height: 50px;
+            background-color: rgb(0,255,0);
+        }
+        div>div>div{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(0,0,255);
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        // $(function(){
+        //     $('div').on('click',function(e){
+        //         e.stopPropagation();
+        //         console.log($(this).css('background-color'));
+        //     },true);
+        // });
+        var div1,div2,div3;
+        $(function(){
+            var callback=function(e){
+              console.log(this);  
+            };
+            div1=document.querySelector('div');
+            div2=document.querySelector('div>div');
+            div3=document.querySelector('di>div>div');
+            div1.addEventListener('click',callback,true);
+            div2=addEventListener('click',callback,true);
+            div3=addEventListener('click',callback,true);
+        });
+    </script>
+</head>
+<body>
+    <div>
+        box1
+        <div>
+            box2
+            <div>
+                box3
+            </div>
+        </div>
+    </div>
+</body>
+</html>

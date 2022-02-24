@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        var arr=[ // arr를 선언하고, 다음값을 넣겠다.
+            'imgs/thumb01.jfif',
+            'imgs/thumb02.jfif',
+            'imgs/thumb03.jfif',
+            'imgs/thumb04.jfif',
+            'imgs/thumb05.jfif',
+            'imgs/thumb06.jfif',
+        ];
+        var arr2=[]; // arr2 배열생성
+        $(function(){
+            // $(arr).each(function(idx,ele){
+            //     $('<img/>').attr('src',ele).appendTo('.rolling'); //<img> : 엘리먼트 
+            // });
+            // 밑에 .rolling이라고 선언한 클래스를 특정하는 것이다. number와 element를 
+            $('.rolling+img').each(function(idx,ele){// img 6개가 잡히고(element들), 배열에 이미지 6개가 담겨있다.
+                arr2.push(ele); // 생성한 arr2에 element들을 넣어준다. 
+                console.log(arr2); // 
+            }); 
+        });
+
+        function callback(){
+            $('.rolling').html('<img src="'+arr[1]+'"/>'); // rolling에 arr의 element들(위 에 imgs/thumb01...같은 것들)을 적어준다.
+            arr.push(arr.shift());
+            $('.rolling').html(arr2[1]);
+        }
+
+    </script>
+</head>
+<body>
+    <div class="rolling">
+    <ul>
+        <li><img src="imgs/thumb01.jfif" alt=""></li> 
+        <li><img src="imgs/thumb02.jfif" alt=""></li>
+        <li><img src="imgs/thumb03.jfif" alt=""></li>
+        <li><img src="imgs/thumb04.jfif" alt=""></li>
+        <li><img src="imgs/thumb05.jfif" alt=""></li>
+        <li><img src="imgs/thumb06.jfif" alt=""></li>
+    </ul>
+
+    </div>   
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style rel="stylesheet" type="text/css">
+        .carousel{
+            width: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel>ul{
+            list-style: none;
+            padding: 0px;
+            width: 600px;
+        }
+        .carousel>ul>li{
+            float: left;
+        }
+        .carousel>ul>li>img{
+            width: 100px;
+        }
+        .carousel>a{
+            display: block;
+            width: 50px;
+            height:100px;
+            position: absolute;
+            left: 0px;
+        }
+        .carousel>a:last-child{
+            left: 50px;
+        }
+
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+           $('<a href="#">prev</a>')
+                .click(function(){return false;})
+                .appendTo('.carousel');
+
+           $('<a href="#">next</a>')
+                .click(function(){
+                    next();
+                    return false;  
+                })
+                .appendTo('.carousel');
+            setInterval(() => {
+                next();
+            }, 1000);
+        });
+        var left=0;
+        function next(){
+            left-=100;
+            if(left==-600) left=0;
+            $('.carousel>ul').css('margin-left',left);
+        }
+</script>   
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>하이미디어</h1>
+        </div>
+        <div id="menu">
+            <a href="#">menu1</a>
+            <a href="#">menu2</a>
+            <a href="#">menu3</a>
+            <a href="#">menu4</a>
+        </div>
+        <div id="content">
+            <div class="carousel">
+                <ul>
+                    <li><img src="imgs/thumb01.jfif" alt=""></li>
+                    <li><img src="imgs/thumb02.jfif" alt=""></li>
+                    <li><img src="imgs/thumb03.jfif" alt=""></li>
+                    <li><img src="imgs/thumb04.jfif" alt=""></li>
+                    <li><img src="imgs/thumb05.jfif" alt=""></li>
+                    <li><img src="imgs/thumb06.jfif" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer"></div>
+        copyright ⓒHimedia Academy, All Rights Reserved.
+        </div>
+</body>
+</html>

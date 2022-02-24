@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        var callback=function(){
+                console.log($(this).text());
+            };
+        $(function(){
+            $(document).on('click','button',callback); // document에 버튼 이벤트 달았음. document라서 처리가 가능하다.
+            $('<button>btn2</button>').appendTo('div');    
+        });
+    </script>
+</head>
+<body>
+    <h1>event binding</h1>
+    <div>
+        <button>btn1</button>
+    </div>
+</body>
+</html>

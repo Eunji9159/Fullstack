@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            console.log($('input').first().val());
+            $('select').prop('disabled',false);
+        });
+//form>(div>label+input)*2+(div>select>option*4)+div>button[type=submit]
+    </script>
+</head>
+<body>
+   <form>
+                                                <!-- $('select').prop('disabled'); 하면 true -->
+       <div><label></label><input type="text" readonly="readonly"/></div>  
+       <div><label></label><input type="text" disabled="disabled"></div>
+       <div>
+           <select disabled="disabled">
+               <option>item1</option>
+               <option>item2</option>
+               <option>item3</option>
+               <option>item4</option>
+           </select>
+       </div>
+       <div><button type="submit"></button></div>
+   </form>
+</body>
+</html>

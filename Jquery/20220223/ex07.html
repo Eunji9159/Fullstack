@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+       $(function(){
+           $('form').submit(function(e){
+               console.log('기본기능취소');
+            //    var id1=$('input').eq(0).val();
+            //    if(id1) return true; // 비어있으면 return true니까 페이지 이동X
+            //    else return false; // 비어있지 않으면 페이지 이동함
+            return false;
+           });
+           $('input').focusout(function(){
+               $(this).next().remove();
+               if($(this).val().length<4)
+                    $('<span>4자리이상</span>')
+                        .css('color','red')
+                        .insertAfter(this);
+               else $(this).next().remove(); 
+           });
+        //    $('select').change(function(){
+        //        console.log('select 선택',$('select').val()); // select했을 때 내가 뭘 선택했는지 보고 싶을 때
+        //    });
+        //    $(":button").click(function(){
+        //        history.back(); // 뒤로 가기 눌렀을 때 이전 작업페이지가 나오도록
+        //    });
+        //    $('input').eq(0).focus(function(){
+        //        var val=$('input').eq(0).val();
+        //        if(val=='id입력')$('input').eq(0).val(''); // 커서가 왔을 때 값이 지워지도록
+        //    });
+        //    $('input').eq(1).blur(function(){
+        //         if($('input').eq(1).val().length<4)alert('4자이상');
+        //    });
+       });
+//form>(div>lavel+input[type=text])*2+(div>select>option*4)+(div>button*2)
+    </script>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="ex08.html"> // 이동안하게 없는페이지 설정해줌
+        <div><label for="id">id</label><input type="text" id="id" value="id입력"></div> // 'label for'로 묶어주는 효과를 낸다.
+        <div><label for="pw">pw</label><input type="password" id="pw"></div> 
+        <div>
+            <select name="sel">
+                <option value="it1">item1</option>
+                <option value="it2">item2</option>
+                <option value="it3">item3</option>
+                <option value="it4">item4</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">전송</button>
+            <button type="reset">취소</button>
+            <button type="button">뒤로</button>
+        </div>
+    </form>        
+</body>
+</html>
