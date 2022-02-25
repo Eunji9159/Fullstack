@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // 보조교육자료
+            $('button').click(function(){
+                $('#target').load('ex01.html') // id가 target인 요소를 선택하고, 그 요소에 ex01.html를 불러오겠다.
+                // 메인통신
+                jQuery.get('lec01.txt',function(data){ // lec01.txt를 요청하고, 그 데이터를 불러온다. 그리고 콘솔에 데이터를 찍는다. // lec01.txt를 요청하고, 응답에 대한 인자를 함수를 통해서 얻을 수 있다.
+                    console.log(data); // get의 인자는 4가지. 그 중, success 상황(lec01.txt에 대한 요청이 성공한 상황)에 대한 function을 사용하면 제공받을 수 있는 인자 3개 중 data를 사용한다.
+                    
+                }); // ■ jquery 통신
+                // ■ 자바스크립트 통신
+                // xhr=new XMLHttpRequest(); 
+                // xhr.onreadystatechange=callback;
+                // xhr.open('get','ex01.html');
+                // xhr.send();
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>ajax</h1>
+    <button>loading</button>
+    <div id="target">ex01</div>
+    <div>상단의 내용은 불러온 내용</div>
+</body>
+</html>

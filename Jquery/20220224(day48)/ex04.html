@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.min.css"/> -->
+    <style rel="stylesheet" type="text/css">
+        img{
+            width: 200px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+        var bx;
+        $(function(){
+            bx=$('.slider').bxSlider({
+                mode: 'fade',
+                captions: true,
+                slideWidth: 600,
+                slideWidth: 200, // slideWidth의 defalut: 0 
+                minSlides:2, // 창크기에 따라 fix되는 최소갯수
+                maxSlides:3,
+                moveSlides:1, // 몇개씩 이동하는지/ min과 max사이여야만 하므로 (디폴트라면)1일 수밖에,,
+                // mode:'vertical', // 세로로 보여짐
+                mode:'horizontal', // horizontal : 기본값
+                speed:2500,
+                slideMargin:10, // 이미지 간 간격
+                // randomStart:true,
+                // controls:false
+                nextText: '다음',
+                prevText: '이전',
+                // nextSelector:$('span:eq(1)'),
+                nextSelector:$('button:eq(0)'),
+                prevSelector:$('button:eq(1)'),
+                // auto:true,
+                // autoControls:true,
+                // startText:'시작',
+                // stopText:'중지'
+                pause:1000,
+                autoStart:false,
+                pagerType: 'short',
+                onSliderLoad:function(){console.log('loading');},
+                onSlideBefore:function(a,b,c){console.log('onSlideBefore',a,b,c);},
+                // onSlideBefore:function(a,b,c){$('div:eq(0)').html(a.html())},
+                onSlideAfter:function(a,b,c){console.log('onSlideAfter',a,b,c);},
+                onSlideNext:function(a,b,c){console.log('onSlideNext',a,b,c,a,b,c);},
+                onSlidePrev:function(a,b,c){console.log('onSlidePrev',a,b,c);}
+                });
+        });
+    </script>
+    
+</head>
+<body>
+    <div></div>
+    <div class="slider">
+        <div><img src="imgs/thumb01.jfif" title="img1"/></div>
+        <div><img src="imgs/thumb02.jfif" title="img2"/></div>
+        <div><img src="imgs/thumb03.jfif" title="img3"/></div>
+        <div><img src="imgs/thumb04.jfif" title="img4"/></div>
+        <div><img src="imgs/thumb05.jfif" title="img5"/></div>
+        <div><img src="imgs/thumb06.jfif" title="img6"/></div>
+    </div>
+    <button></button>
+    <button></button>
+    <span></span>
+    <span></span>
+</body>
+</html>

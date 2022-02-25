@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+    <!-- jquery를 먼저 불러온 후에 jquery의 모든 플러그인들을 불러올 수 있음 -->
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script> 
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+    <script type="text/javascript">
+    $(function(){
+        $('button')
+            .eq(0)
+                .click(function(){//버튼 잡고 첫번째 버튼에서 클릭했을 때 이벤트 달기
+                    $('div').hide('fast',function(){// hide('fast') 빠르게 숨겨짐(default:200)
+                            alert('숨김');
+                    }); 
+                })
+            .next() // eq(1)(=btn2)을 잡음
+                .click(function(){ // 클릭 이벤트를 단다.
+                    // $('div').show('slow'); // show하면 보여짐, 느리게 숨겨짐(default:600)/ 
+                                              // default는 400. 
+                                              // 기존에 안보였던 이유는 디폴트가 400이었던 것
+                    // $('div').show('slow','swing'); // swing은 가속이 붙어서 보여지는 반면 
+                    // $('div').show('slow','linear');// linear는 일정한 패턴으로 보여짐.
+                    $('div').show('slow','easeOutBounce');
+                }) // function 사용이 끝나고 ; 으로 chaining가능하다.
+            .next()
+                .click(function(){
+                    $('div').toggle({ // toggle: 한번 누르면 숨겨지고, 다시 누르면 보여짐(?)
+                        duration:3000, // 3초동안 애니메이션이 진행
+                        easing:'swing',// 문자열
+                        // complete:function(){alert('끝');},// 이벤트가 끝나고나면 callback function(alert창)
+                        // start:function(){alert('시작');} // 이벤트가 시작되면 
+                        // progress:function(a,b,c){console.log(a.elem,b,c);} // 콘솔출력:(적용되는 element, (남은)시간)
+                        complete:function(){
+                            $('button').eq(2).click(); // eq(2)를 계속 누르기
+                        }
+                    }); 
+                });
+    });
+    //h1+button*4+div
+    </script>
+</head>
+<body>
+    <h1>애니메이션1</h1>
+    <button>btn1</button>
+    <button>btn2</button>
+    <button>btn3</button>
+    <button>btn4</button>
+    <div>대통령의 선거에 관한 사항은 법률로 정한다. 대통령은 내란 또는 외환의 죄를 범한 경우를 제외하고는 재직중 형사상의 소추를 받지 아니한다. 
+    누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 
+    다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다.
+    비상계엄이 선포된 때에는 법률이 정하는 바에 의하여 영장제도, 언론·출판·집회·결사의 자유, 정부나 법원의 권한에 관하여 특별한 조치를 할 수 있다. 
+    국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다. 
+    모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다.
+    국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다. 
+    언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 
+    통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 신체장애자 및 질병·노령 기타의 사유로 생활능력이 없는 국민은 법률이 정하는 바에 의하여 국가의 보호를 받는다.</div>
+</body>
+</html>

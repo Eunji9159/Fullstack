@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style rel="stylesheet" type="text/css">
+        table{
+            border-collapse: collapse;
+            width:80%;
+            margin: 0px auto;
+        }
+        /* table>thead{} */
+        table>thead>th:first-child{
+            width: 100px;
+        }
+        table,th,td{
+            border:1px solid gray;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.get('stu.xml',function(data){
+                var tbody=$('<tbody></tbody>'); // tbody생성
+                $(data).find('student').each(function(idx,ele){ // data(stu.xml)에서 student요소를 찾는다.
+                    var num=$(ele).find('num').html(); // student당 안에 있는 것들 중에 num을 찾고 그 안에 있는 html을 불러온다.
+                    var name=$(ele).find('name').html();
+                    var kor=$(ele).find('kor').html();
+                    var eng=$(ele).find('eng').html();
+                    var math=$(ele).find('math').html();
+                    console.log(num,name,kor,eng,math);
+                    $('<tr>') // <tr>안에 
+                        .append('<td>'+num+'</td>')
+                        .append('<td>'+name+'</td>')
+                        .append('<td>'+kor+'</td>')
+                        .append('<td>'+eng+'</td>')
+                        .append('<td>'+math+'</td>')
+                        .appendTo(tbody); //tbody로 tr에 넣은 값들을 넣어준다.
+                });
+                $('table').append(tbody);
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>학생성적 리스트</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>학번</th>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+        
+    </table>
+</body>
+</html>
