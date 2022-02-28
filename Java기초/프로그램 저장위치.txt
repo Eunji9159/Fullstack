@@ -1,0 +1,24 @@
+[설치 경로]
+** 새로 다운로드 한 이클립스 경로
+C:\eclipse-jee-2020-06-R-win32-x86_64\eclipse
+
+이클립스 전자정부 - util
+   	C:\utill\eGovFrameDev-3.10.0-64bit\eclipse
+
+톰캣 -  학원컴은 C:Server
+	나는 C:\Program Files\Apache Software Foundation
+
+오라클 서버 - C:\oraclexe\app\oracle\product\10.2.0\server
+
+-----------------------------------------
+
+[세팅]
+
+(서버 연결)
+이클립스 설치 후  먼저 해주기.
+windows- preferences - server - Runtime Environment - add - '톰캣 7.0'선택 - 밑에 Create a new local server반드시 선택해주기 - Apply 클릭까지.
+Browse - 톰캣 폴더 선택 - Next - Appliy and Close
+
+General - Web Browser 클릭 - Use external web browsers체크
+(인코딩설정) - Workspace - 밑에 utf8선택
+Web 확장 - Css파일 클릭 - 밑에 utf8선택
