@@ -1,0 +1,18 @@
+body {margin:0;padding:0;}
+ul.a { list-style: inside url("../img/sqpurple.gif"); margin: 0 50px; } /* inside(들여쓰기)는 디폴트값. 기본으로 들여쓰기 된다. 즉, 여기서 들여쓰기 되는 것은 margin때문인 것 */
+ul.b { list-style-position: inside; }
+ul.b { list-style-type: none; padding:0;}  /* 마커에는 패딩이 있다. 패딩을 없애는 경우, marker까지 사라진다. margin없애면 marker그대로 살아있다.  */
+ul.c { list-style-type: none; margin: 0;}
+
+/* 스타일의 우선순위: 1 > 2 > 3
+1. Inline CSS(엘리먼트내부스타일시트): 시작엘리먼트에 style속성이나 단독 속성으로 기술하는 스타일
+2. Internal CSS(내부스타일시트) : <head></head>태그 사이에 <style></style>로 기술하는 스타일
+3. External CSS(외부스타일시트) : css파일을 참조하여 사용하는 스타일 
+
+list-style-position 속성 기본값(디폴트):outside 
+inside속성은 list-style-type: none; 일때는 적용되지 않는다.
+list-style-type : 마커 모양(ul, ol)변경 속성.
+list-style-position : 마커 들여쓰기 속성.
+list-style-image : 마커 스타일을 이미지로 사용할 수 있는 속성.
+list-style : shorthand표현. 선모양 들여쓰기속성 이미지사용속성 값 같이 사용 가능
+*/

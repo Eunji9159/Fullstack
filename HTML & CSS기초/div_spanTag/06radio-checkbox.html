@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+		<meta charset="utf-8">
+     <title> 웹 폼</title>
+     <style>
+	 body {
+		background-color:#fff; /* html의 기본배경색 : 투명색(transparent)이다! */
+	 }
+	 form fieldset{
+		margin-bottom:25px; /* 밑 바깥 여백 */
+	 }	 
+	 form legend{
+		font-size:15px;
+		font-weight:600; 
+	 }
+	 form label.reg {/* form에서 자식or후손으로 존재하는 label요소 중에서 클래스명이 reg인 것  */
+		font-size:14px;
+		color:#390;
+		font-weight:bold;
+		width:110px;
+		float:left;
+		text-align:right;
+		margin-right:10px;
+	 }
+	 form ul li{/* form요소에서 ul - li요소 없음. -> 필요없으니 지우자! */
+		list-style:none; 
+		margin: 15px 0;	
+		font-size:14px;	
+	 }
+ 
+
+	 #member, #stuffs {/* # : id속성. id가  member, stuffs인 것  */
+		width:50px; 
+	 }
+	 
+	 #pre {
+		margin-left:15px;
+	 }
+	 </style>
+  </head>
+  <body>
+	<form action="08date.html" method="get" >
+		<fieldset>
+			<legend>신청 과목</legend>
+			<p>이 달에 신청할 과목을 선택하세요 (1과목만 가능)</p>
+			<label class="reg"><input type="radio" name="subject" id="member" value="speaking">회화</label> <!-- radio박스: 여러 개 중 하나만 선택 가능 / 하나만 선택해서 하나만 보내기 때문에 name값이 같아야 한다. / 데이터 전송하기 위해서는 'name'속성이 필요하다. -->
+			<label><input type="radio" name="subject" value="grammar">문법</label>
+			<label><input type="radio" name="subject" value="writing">작문</label>       
+		</fieldset>
+		<fieldset>
+			<legend>메일링</legend>
+			<p>메일로 받고 싶은 뉴스 주제를 선택해 주세요 (복수 선택 가능)</p>
+			<label class="reg"><input type="checkbox" name="mailing1" id="stuffs" value="news">해외 단신</label><!-- name속성의 값이 같거나 다르거나 상관없음. -->
+			<label><input type="checkbox" name="mailing2" value="dialog">5분 회화</label>
+			<label><input type="checkbox" name="mailing3" value="pops">모닝팝스</label>
+		</fieldset>
+		<input type="submit" value="전송"> <!--submit버튼을 클릭하면 감싸고 있는 form의 action으로 간다. but, 지금 form에는 action이 없으므로 디폴트. 자기 페이지로 감.  -->
+  </form>
+  </body>
+</html>

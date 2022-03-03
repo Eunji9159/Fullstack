@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+     <meta charset="utf-8">
+     <title> 웹 폼</title>
+  </head>
+  <body>
+	<form>
+		<fieldset>
+			<legend>과 티셔츠 설문</legend>
+<!-- 			?color=#00ff00&file=파일명.확장자&disabled=비활성화&hidden=숨김타입&number=5 -->
+<!-- ?color=%2300ff00&file=2022-01-20+수업내용.txt&hidden=숨김타입&number=5 -->
+			<p>올해 과 티(T)를 만들려고 합니다. 원하는 색상을 추천해 주세요.</p>
+			<label>선호색상  <input type="color" value="#00ff00" name="color"></label> <!-- label을 클릭해도 나옴. label로 감싸주었기 때문이다. -->
+			<label>텍스트  </label> <input type="text"><br>
+			<label>파일선택</label><input type="file" name="file"><br> <!-- 파일 전송 시에는 용량제한이 없는 post방식으로 데이터 전송하는 게 좋다. get방식으로 했을 경우 파일이름만 가져옴 -->
+    		<label>비활성화</label><input type="text" value="비활성화" name="disabled" disabled><br> <!-- disabled: 보이기는 하는데 뭔가 할 수 없도록 비활성화됨 / disabled는 데이터전송을 막기도 한다.(주소창에 "비활성화"라고 안찍힘) --> 
+    		<label>숨김타입</label><input type="hidden" value="숨김타입" name="hidden"><br> <!-- hidden : 브라우저 실행하면 안보임. 주소창에는 보인다. -->   
+        	<label>숫자선택</label><input type="number" name="number"><br>  <!-- 숫자값만 입력되도록.  -->
+		</fieldset>
+		<input type="submit" value="전송하기">
+
+  </form>
+  </body>
+</html>
