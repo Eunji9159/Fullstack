@@ -1,0 +1,7 @@
+/* z-index속성은 층 수를 정하는 속성이다. */
+body { margin: 0; padding: 0; background-color: black; }
+h2 {margin: 0;}
+
+div.relative { color:white; border:1px solid white; position: relative; left: 30px; top: 20px;  background-color: lightpink; } 
+div.relative1 {color:white; border:1px solid white; position: relative;  background-color: lightpink; } 
+div.relative2 { color:white;border:1px solid white; position: relative;  background-color: lightpink; } 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Array</title>
+</head>
+
+<body>
+	<h1>배열관련 함수들</h1>
+	<script>
+		// charAt(인덱스) : 문자열의 한 글자만 추출
+		var str = "안녕하세요!";
+		document.write(str.charAt(2) + "<br>"); /*'하' 떼옴. 0부터 시작  */
+		document.write(str[5] + "<br>");	/* '!' 떼옴. */
+
+		// Array.isArray() :배열객체 여부 판별
+		var arr = [1, true, "JavaScript"]; /* arr : 객체 / [1, true, "JavaScript"] : 배열 */
+		document.write(Array.isArray(arr) + "<br>");
+		document.write(Array.isArray(str) + "<br>");
+
+		// 객체|변수|데이터 instanceof Array :배열객체 여부 판별
+		document.write((arr instanceof Array) + "<br>"); // instanceof : 객체가 어떤 클래스인지, 어떤 클래스를 상속받았는지 확인하는데 사용하는 연산자
+		document.write((str instanceof Array) + "<br>"); 
+	</script>
+	
+</body>
+
+</html>

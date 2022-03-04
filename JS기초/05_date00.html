@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8"><title>제목</title>
+<script>
+	var today = new Date(); // Date 자료형의 객체 생 성 /* 오늘 현재 날짜 정보 반환 */
+	//getMonth() : 0~11까지 (원래의 달 수보다 1이 작게 리턴됨.) /* 가져올 때 -1 달 해옴. */
+	var mon = today.getMonth() + 1;
+	var week = [ "일", "월", "화", "수", "목", "금", "토" ];
+	// getDay : 0(일요일)~6(토요일)까지 가져오는 함수 / 요일에 대한 숫자index를 가져오는 것.
+	var day = week[today.getDay()]; 
+/* 	var day = week[5]; */
+
+	document.write(today.getFullYear() + "년 " + mon + "월 " 
+	+ today.getDate() + "일 " + day + "요일");
+</script></head><body></body></html>

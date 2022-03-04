@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>변수 선언 및 사용</title>
+	<script>
+		// alert("자바스크립트의\n줄바꿈입니다.");
+		// var 예약어(js에서 지정이 된 키워드) 사용 - var : 전역변수. 전역변수로 선언할 때 hoisting(키워드 없이 변수명만 넣어도 된다는 것)이 가능하다. 위에서 선언이 되고, 밑에서 사용하는 경우.
+		box; /* 값을 대입받은 것이 없기 때문에 undefined로 찍힘. */
+		document.write(box ,"<br>");/* html객체를 document로 찍는 것이다. html웹문서에서 body안에 무엇인가를 써라. body에서 줄바꿈할 수 있는 요소는 <br>밖에 없음.
+								 																	alert에서는'\n'가 줄바꿈요소.*/
+
+		var box = 30; /* hoisting됨. 위에 box와 똑같은 것. */
+		document.write(box ,"<br>");
+
+		var box = "재선언 가능"; /* var라는 키워드는 재선언이 가능함. */
+		document.write(box + "<br>");
+
+		// a = true;
+		// document.write(a, "<br>");
+
+		// let 예약어 사용
+		let a = true; /* 지역의 개념. hoisting이 안되기 때문에 꼭 먼저 선언해준 후에 사용할 수 있다.  */
+		document.write(a, "<br>");
+
+		// let a = "재선언 불가";
+		a = "재할당 가능";
+		document.write(a, "<br>");
+
+		// const 예약어 사용
+		//선언만 하는 것은 불가
+		// const b; 
+		const b = "상수"; /* 변경이 되지 않는 절대값. hoisting이 안되기 때문에 위에서 먼저 사용이 안되고, 선언해주어야 됨. 재선언이 안됨. */ 
+		// const b = "재선언 불가";
+		// b = "재할당 불가";
+		document.write(b, "<br>");
+
+	</script>
+</head>
+<body>
+</body>
+</html>

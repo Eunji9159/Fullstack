@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>JS</title>
+	<script>
+		var t; /* 값이 아무것도 대입되지 않았으니 null이 아니라 undefined. */
+		document.write("값이 초기화되지 않은 상태: "+t, "<br>"); /*write는 문자열결합은 , 로 한다.  */
+		t="hello"; 
+		document.write("값이 초기화된 상태: "+t, "<br>");
+		t=null; /* 정확히는 비워진 상태라기 보다, 뭐가 있는지 모르는 상태  */
+		document.write("값이 비워진 상태: "+t, "<br>"); 
+		t="";
+		document.write("값이 빈문자열인 상태: "+t, "<br>");
+
+		
+		
+		//java형식 : int[] i={10, 20, 30};
+		//배열 자료형 : 요소값의 자료형이 달라도 상관없다.
+		let fruits = ["Banana", 50 , false , "Mango"]; /* 자료형이 다 달라도 된다. */
+		document.write(fruits[0] +", "+ fruits[1] +", "+ fruits[2] +", "+ fruits[3] +"<br>");
+
+		
+		/* 자바랑은 다르게 object는 순서[]가 있다. */
+		/* key는 string자료형을 쓴다. */
+		/* 자바스크립트의 최상위 객체:object  */
+		/* 자바스크립트의 object자료형 : [key,value] */
+		const car = {type:"Fiat", model:"500", color:"white"}; /*const : 값이 변하지 않는다. */
+		document.write(Object.keys(car)[0]+ ":"+ car.type +"<br>");
+		document.write(Object.keys(car)[1]+ ":"+ car["model"] +"<br>");
+		document.write(Object.keys(car)[2]+ ":"+ car.color +"<br>");
+	</script>
+</head>
+<body>
+</body>
+</html>
