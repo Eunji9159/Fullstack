@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>탐색 선택자</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                // $('p').css("color","green");
+                // 1번 선택자:  <p>p태그1 : <span">p태그1 안의 span태그</span></p>
+                // 2번 선택자 : <p>p태그1의 동생 p태그2: <span>p태그1 안의 span태그</span></p>
+                // 3번 선택자 : <p>p태그3</p>
+                $('p:first').css("color","green").next().css('color','red').next().css({'color': 'aqua', 'font-weight':'bolder'}).end().children('span').css({'color': 'blue', 'font-weight':'bolder'});
+           		//18번째 줄						다음 형제(19번째 줄)																	바로 이전(상위)요소로 올려라. (다시 19번째 줄 p로 올라옴.)
+            });
+        </script>
+</head>
+<body>
+    <p>p태그1 : <span">p태그1 안의 span태그</span></p>
+    <p>p태그1의 동생 p태그2: <span>p태그1 안의 span태그</span></p>
+    <p>p태그3</p>
+</body>
+</html>
