@@ -12,7 +12,8 @@
   		<p>${k}번입니다.</p>   <%-- 'c:out' : out.println(k) 처럼 출력 기능을 한다. 
 										      보안적인 코드 출력 --%>
 	</c:forEach>  
-	
+<%--  		<p><c:out value="<script>alert('확인');</script>"/></p> --%>
+	<script>alert('확인');</script>
 
 </body>
 </html>
