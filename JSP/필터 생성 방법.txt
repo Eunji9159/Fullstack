@@ -1,0 +1,19 @@
+
+필터 생성 방법
+New - [Web] filter
+Class name : 클래스명 입력 > next
+Filter mappings : 안에 있는 경로 선택 후 Edit
+URL pattern 체크
+Pattern : 적용할 url경로 입력 > ok > finish
+
+
+디폴트 생성자 삭제(생성자 오버로딩 없는 경우만)
+메소드 순서 변경하기
+init() - 초기
+doFilter() - 실행되는 동안
+destroy() - 해제될 때
+
+
+필터란(Filter)
+-요청과 응답사이에서 정보들을 변경할 수 있게 개발자한테 제공되는 서블릿 컨테이너 종류 중 하나임.
+-javax.servlet 패키지에서 제공됨.
