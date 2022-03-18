@@ -1,0 +1,16 @@
+package com.springbook.ioc.injection;
+
+public class CollectionBeanClient {
+
+	public static void main(String[] args) {
+		AbstractcollectionContext factory = new GenericXmlcollectionContext("collectionContext.xml");
+		
+		CollectionBean bean = (CollectionBean) factory.getBean("collectionBean");
+		List<String> addressList = bean.getAddressList();
+		for (String address : addressList) {
+			System.out.println(address.toString());
+		}
+		factory.close;
+	}
+
+}

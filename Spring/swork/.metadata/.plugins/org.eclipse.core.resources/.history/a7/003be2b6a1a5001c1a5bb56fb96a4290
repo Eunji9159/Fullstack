@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="collectionBean" class="com.springbook.ioc.injection.CollectionBean">
+		<property name="addressList">
+			<!--p.92-93 List  
+			<list>
+				<value>서울시 강남구 역삼동</value>
+				<value>서울시 성동구 행당동</value>
+			</list>
+			-->
+			
+			<!--p. 95 Set--> 
+			<set value-type="java.lang.String">
+				<value>서울시 강남구 역삼동</value>
+				<value>서울시 성동구 성수동</value>
+				<value>서울시 성동구 성수동</value>
+			</set> 
+		
+<!-- 			<map> -->
+<!-- 				<entry> -->
+<!-- 					<key><value>고길동</value></key> -->
+<!-- 					<value>서울시 강남구 역삼동</value> -->
+<!-- 				</entry> -->
+<!-- 				<entry> -->
+<!-- 					<key><value>마이콜</value></key> -->
+<!-- 					<value>서울시 강서구 화곡동</value> -->
+<!-- 				</entry> -->
+<!-- 			</map> -->
+		
+		
+<!-- 		p.96-97 map -->
+		<bean id="collection" class="com.springbook.ioc.injection.Collection">
+			<property name="addressList">
+			<map>
+				<entry key="홍길동" value="서울시 마포구 염창동"/>
+				<entry key="고길동" value="서울시 강남구 역삼동"/>
+				<entry key="마이콜">
+			</map>
+			</property>
+		
+		</bean>
+		</property>
+	</bean>
+</beans>

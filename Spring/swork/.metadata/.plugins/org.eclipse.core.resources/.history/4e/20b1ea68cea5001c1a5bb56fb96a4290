@@ -1,0 +1,17 @@
+package com.springbook.biz.board.impl;
+
+public class BoardDAO {
+
+// DAO(Data Access Object)
+@Repository("boardDAO")
+public class BoardDAO{
+	// JDBC 관련 변수
+	private Connection conn = null;
+	private PreparedStatement stmt = null;
+	private ResultSet rs = null;
+	
+	// SQL 명령어들
+	private final String BOARD_INSERT = "insert into board(title, writer, content) values(?,?,?)";
+}
+
+}

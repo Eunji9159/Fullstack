@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--1. xml에 기술해 매개변수의 갯수와 똑같은 매개인자를 불러온다.--> 
+<bean id="tv" class="polymolphism.SamsungTV"> 
+	<constructor-arg ref="apple"></constructor-arg>
+	<constructor-arg value="2700000"></constructor-arg>
+</bean>
+<bean id="sony" class="polymolphism.SonySpeaker"></bean>
+<bean id="sony" class="polymolphism.AppleSpeaker"></bean>
+</beans>

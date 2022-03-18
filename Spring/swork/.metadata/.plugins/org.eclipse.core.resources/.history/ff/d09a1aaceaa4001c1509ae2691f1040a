@@ -1,0 +1,10 @@
+package polymolphism;
+
+public class BeanFactory {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
