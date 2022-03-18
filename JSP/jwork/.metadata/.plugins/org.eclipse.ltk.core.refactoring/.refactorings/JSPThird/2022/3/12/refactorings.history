@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;CharacterEncodingFilter.java&apos; to &apos;JSPThird/src/util&apos;&#x0D;&#x0A;- Original project: &apos;JSPThird&apos;&#x0D;&#x0A;- Destination element: &apos;JSPThird/src/util&apos;&#x0D;&#x0A;- Original element: &apos;com.filter.CharacterEncodingFilter.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;util" element1="/src&lt;com.filter{CharacterEncodingFilter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1647247399400" units="1" version="1.0"/>
+</session>

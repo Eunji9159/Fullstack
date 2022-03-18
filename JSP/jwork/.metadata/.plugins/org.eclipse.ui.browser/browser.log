@@ -1,0 +1,11 @@
+
+3월 14, 2022 15:39:03.492 NEW SESSION
+3월 14, 2022 15:39:03.493 [7568:324:0314/153903.488:ERROR:device_event_log_impl.cc(214)] [15:39:03.488] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 14, 2022 15:39:36.542 [10956:864:0314/153936.541:ERROR:device_event_log_impl.cc(214)] [15:39:36.542] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 14, 2022 15:42:50.208 [11836:9476:0314/154250.207:ERROR:device_event_log_impl.cc(214)] [15:42:50.206] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 14, 2022 15:44:12.784 [1356:10740:0314/154412.783:ERROR:device_event_log_impl.cc(214)] [15:44:12.784] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 14, 2022 17:41:12.674 [11880:6452:0314/174112.673:ERROR:device_event_log_impl.cc(214)] [17:41:12.673] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+
+3월 15, 2022 09:37:03.235 NEW SESSION
+3월 15, 2022 09:37:03.235 [13876:8352:0315/093703.233:ERROR:device_event_log_impl.cc(214)] [09:37:03.232] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 15, 2022 14:31:22.11 [13876:8352:0315/143122.010:ERROR:device_event_log_impl.cc(214)] [14:31:22.010] USB: usb_service_win.cc:260 Failed to get device driver name: 요소가 없습니다. (0x490)
