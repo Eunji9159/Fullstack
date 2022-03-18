@@ -1,0 +1,233 @@
+# mySql
+
+
+* mysql 접속
+
+mysql  -u  root -p
+
+---------------
+자동커밋여부 확인하는 명령: 
+> show variables like 'autocommit%';
+SET AUTOCOMMIT = TRUE; --> 설정 
+SET AUTOCOMMIT = FALSE; --> 해제
+
+------------------------------------------------------------------
+mysql 계정 생성
+- 사용자 추가 
+mysql > create user 사용자ID;   // 사용자 추가
+- 사용자(user)를 추가하면서 패스워드까지 설정
+mysql > create user userid@localhost identified by '비밀번호';
+
+- 기존에 사용하던 계정에 외부 접근 권한을 부여하려면, 
+- Host를 '%' 로 하여 똑같은 계정을 추가한다
+- '%' 의 의미는 외부에서의 접근을 허용
+mysql > create user 'userid'@'%' identified by '비밀번호';  
+>오라클: create user 아이디 identified by 비번;
+
+
+---------------
+자료형 참고 사이트
+https://kimvampa.tistory.com/72
+https://devdhjo.github.io/mysql/2020/01/30/database-mysql-003.html
+https://arrkaize86.tistory.com/entry/MySQL-Oracle-%EA%B3%BC-%EB%B9%84%EA%B5%90
+
+
+쿼리문 참고 사이트
+https://ttend.tistory.com/609
+======================================================
+
+* 데이터베이스 생성 (대소문자 구분 안함, 값만 대소문자 구분)
+create database jspbookdb CHARACTER  SET  utf8;
+
+
+* 데이터베이스 리스트
+SHOW  DATABASES;
+>오라클: select * from all_users;
+
+
+
+* 데이터베이스 사용(지정)
+use jspbookdb;
+
+
+* 현재 사용하고 있는 DB 표시//의미가 없음 프롬프트에 뜨기 때문에 잘 사용안함.
+SELECT  DATABASE();
+
+
+
+
+* 테이블 생성
+--enum('남자', '여자') : 
+오라클의 check()제약조건과 동일한 기능을 수행하나
+오라클은 제약조건이지만 마리아DB는 자료형으로 지정된다.
+
+CREATE  TABLE  student (
+  id  int  NOT  NULL,
+  name  varchar(10)  NOT  NULL,
+  gender  enum('남자', '여자')  NOT  NULL,
+  address  varchar(50)  NOT  NULL,
+  birthday  date  NOT  NULL,
+  PRIMARY  KEY (id)
+) DEFAULT  CHARSET=utf8;
+
+
+
+* 테이블 리스트
+
+SHOW TABLES;
+>오라클: select * from tab;
+
+
+* 테이블 스키마(구조) 열람
+
+DESC student;
+
+
+
+---------------
+
+
+
+* 데이터 삽입
+
+INSERT  INTO  student
+VALUES (1, '홍길동', '남자', '서울', '1999-10-26');
+
+INSERT  INTO  student
+VALUES (2, '황진이', '여자', '경기', '1991-12-31');
+
+INSERT  INTO  student
+VALUES (3, '전우치', '남자', '인천', '1989-2-10');
+
+INSERT  INTO  student
+VALUES (4, '강백호', '남자', '강원', '1995-11-4');
+
+INSERT  INTO  student
+VALUES (5, '나엄지', '여자', '충남', '1982-11-16');
+
+INSERT  INTO  student
+VALUES (6, '설까치', '남자', '경북', '1997-10-1');
+
+INSERT  INTO  student
+VALUES (7, '추사랑', '여자', '전남', '1985-1-1');
+
+INSERT  INTO  student
+VALUES (8, '삼둥이', '남자', '제주', '1981-2-3');
+
+
+=========================================
+
+* 데이터 조회
+
+SELECT  name, birthday  FROM  student;
+
+
+SELECT  *  FROM  student  WHERE  id=3;
+
+
+SELECT  *  FROM  student
+WHERE  gender='남자'  AND  address='서울';
+
+
+SELECT  *  FROM  student
+WHERE  gender='여자'  OR  address='서울';
+
+
+SELECT  *  FROM  student  LIMIT 1;
+
+
+SELECT  *  FROM  student  LIMIT 3;
+
+
+SELECT  *  FROM  student  LIMIT 1, 1;
+
+
+SELECT  *  FROM  student  LIMIT 2, 1;
+
+
+SELECT  *  FROM  student  LIMIT 0, 2;
+
+
+SELECT  *  FROM  student  LIMIT 1, 2;
+
+
+select * from student  LIMIT 3 OFFSET 0;
+
+
+select * from student  LIMIT 3 OFFSET 1;
+
+
+select * from student  LIMIT 2 OFFSET 2;
+
+
+SELECT  *  FROM  student
+WHERE  gender='남자'  LIMIT 2;
+
+
+SELECT  gender  FROM  student
+GROUP  BY  gender;
+
+
+SELECT  gender, COUNT(*)  FROM  student
+GROUP  BY  gender;
+
+
+SELECT * FROM student WHERE name LIKE '%우치%';
+
+
+select * from student order by id desc;
+
+select * from student order by id desc limit 3 offset 2;
+
+----------------------------------------------
+
+* 데이터 수정
+
+UPDATE  student
+SET  address='서울';
+
+
+UPDATE  student
+SET  name='고길동' WHERE  id=1;
+
+
+UPDATE  student
+SET  address='제주', birthday='2001-1-1'
+WHERE  id=3;
+
+
+
+* 데이터 삭제
+
+DELETE  FROM  student
+WHERE  id=2;
+
+
+
+-----------------------------------
+
+
+* 테이블 제거
+
+DROP  TABLE  student;
+
+
+
+---------------
+
+
+
+* 데이터베이스 삭제
+
+DROP DATABASE samp;
+
+
+
+---------------
+
+
+
+* mysql 종료
+
+exit
+

@@ -1,0 +1,53 @@
+
+1. AUTO_INCREMENT값이 들어가는 테이블 만드는 법
+- AUTO_INCREMENT값은 테이블에 기본키 값으로 많이 사용한다.
+- 데이터가 입력될때 자동으로 값이 1개씩 증가되는 컬럼 속성이어서
+  튜플 간에 데이터 중복이 발생하지 않는 값이 되기 때문이다.
+
+CREATE TABLE MEMBER(
+id int auto_increment primary key, 
+NAME varchar(64) NOT NULL, 
+AGE int NOT NULL
+)DEFAULT CHARSET=utf8;
+
+2. AUTO_INCREMENT에 값 넣는 법
+- AUTO_INCRE컬럼은 빼고 실제 값을 넣을 컬럼명과 값만 
+  쿼리에 지정해 주면 AUTO_INCRE는 자동 증가값이 반영된다.
+INSERT INTO MEMBER(NAME, AGE) VALUES("고라니","29");
+INSERT INTO MEMBER(NAME, AGE) VALUES("고양이","24");
+INSERT INTO MEMBER(NAME, AGE) VALUES("강아지","31");
+INSERT INTO MEMBER(NAME, AGE) VALUES("다람쥐","26");
+
+select * from member;
+
+delete from member where id = 3;
+delete from member where id = 4;
+
+INSERT INTO MEMBER(NAME, AGE) VALUES("고릴라","34");
+
+select * from member;
+
+delete from member where id  > 2;
+
+==========================================
+3. AUTO_INCREMENT 증가값 초기화하는 법
+//증가값이 시작값이 3에서 1씩 증가된다.
+ALTER TABLE MEMBER AUTO_INCREMENT = 3;
+
+INSERT INTO MEMBER(NAME, AGE) VALUES("강아지","31");
+
+select * from member;
+
+==========================================
+4. 증가값 조회 및 수정
+- 증가값을 조회하고 증가값을 변경할 수 있다.
+//증가값 조회
+select  @@auto_increment_increment;
+//증가값 변경
+SET @@auto_increment_increment=2;
+
+INSERT INTO MEMBER(NAME, AGE) VALUES("다람쥐","26");
+
+SET @@auto_increment_increment=1;
+
+INSERT INTO MEMBER(NAME, AGE) VALUES("고릴라","34");
