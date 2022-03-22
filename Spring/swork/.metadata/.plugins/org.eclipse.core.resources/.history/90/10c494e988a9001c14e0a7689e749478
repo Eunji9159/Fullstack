@@ -1,0 +1,4 @@
+jdbc.driver=oracle.jdbc.driver.OracleDriver
+jdbc.url=jdbc:mariadb://localhost:3306/swork
+jdbc.username=root
+jdbc.password=1234
