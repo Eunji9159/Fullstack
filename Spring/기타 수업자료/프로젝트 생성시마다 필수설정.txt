@@ -2,5 +2,6 @@
 
 1. 프로젝트 > 우클릭 > properties클릭 > Project Facets클릭 > Java탭-1.8로 변경
 2. pom.xml에 <properties> - <java-version> '1.8'로 변경, 밑에 줄 <org.springframework-version> '4.2.2'.RELEASE로 변경
-3. src폴더/main/webapp/WEB-INF에 classes폴더 제외하고 다 제거.
+3. src/main/resource 에서 log4j.xml만 남기고 제거(META-INF).
+   src폴더/main/webapp/WEB-INF에 classes폴더 제외하고 다 제거.
    src폴더/main/webapp/WEB-INF/web.xml 열어서 <web-app> //// </web-app> 만 남기고 다 지우기 

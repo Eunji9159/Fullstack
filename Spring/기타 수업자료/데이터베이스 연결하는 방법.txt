@@ -42,7 +42,7 @@ DriverManager.getConnection(url, user, pw);
 
 [>>Spring jdbc연결방법]
 
-Oracle 10g (ojdbc14)
+** Oracle 10g (ojdbc14)
 Oracle 11g (ojdbc6)
 MariaDB 10.3 or 10.4 (mariadb-java-client)
 Mysql 5.1.38버전 (mysql-connector/j)
