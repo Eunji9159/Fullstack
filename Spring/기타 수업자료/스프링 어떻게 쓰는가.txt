@@ -1,0 +1,41 @@
+[ 스프링 어떻게 쓰는가? ]
+
+구현하고자하는 메뉴에 어떠한 기능이 들어갈지, 어떤 탬플릿을 쓸지 생각해서 
+필요한 라이브러리를 가져올 것
+
+데이터베이스에 관련된 라이브러리들 
+>> mariadb, jdbc, dbcp
+
+탬플릿
+>>mybatis, mybatis-spring
+
+파일 업로드
+>>commons-fileUpload
+
+tx 
+>>jweaver, spring-tx
+
+pom.xml에 디펜던시추가
+
+2.
+class단 (src/main/java, src/main/resources)
+src/main/java - 컨트롤러포함한 .java로 끝나는 파일들을 저장하는 곳
+
+src/main/resources - 빈 설정파일(applicationContext.xml), mapper.xml, config.xml 파일들, properties파일들
+
+presentation단 (src/main/webapp)
+
+html, css, js, jsp
+WEB-INF : xml, jsp
+
+===============================
+
+패키지는 일관되게 만들것
+컨트롤러는 메뉴당 처리
+
+================================
+
+web.xml에 파일에 빈설정파일들 연결시켜줄것
+필터처리, 예외처리, 시큐리티처리...
+
+빈설정파일 : 객체생성할 어노테이션처리할 태그추가, 데이터연동객체 설정

@@ -1,0 +1,27 @@
+힌트
+getBoardList.jsp파일의 목록 하단에
+버튼을 먼저 고정적으로 만들어 놓는다.
+
+
+페이징처리 쿼리문
+>>getBoardList가져오는 쿼리문 확인할 것 
+
+board-mapping.xml
+>>SELECT * FROM board WHERE 1=1
+<if test="searchCondition == 'TITLE'"> AND TITLE LIKE CONCAT('%', #{searchKeyword} ,'%') ORDER BY seq DESC</if>
+<if test="searchCondition == 'CONTENT'"> AND CONTENT LIKE CONCAT('%', #{searchKeyword} ,'%') ORDER BY seq DESC</if>
+LIMIT #{listcnt} OFFSET #{start}
+
+total = > 전체목록 : 31개
+총 나오는 버튼 => 31/5 => 6개 나머지가 있고 없고의 여부에 따라 나머지가 있으면 +1, 없으면 그냥
+bntCnt = 한페이지에서 보여줄 버튼 숫자 : 5개
+onePage = 한 버튼 당 보여줄 목록 갯수 :5 개
+시작페이지 : start / 끝나는 페이지 ; end = onePage
+1번 누를때 : 1 - 5 => start = 1(start+ ((bntCnt-1)*onePage))일때, end =(bntCnt*onePage)
+limit 5 offset (btncnt-1)*onePage  
+2번 누를때 : 6 - 10 => start = (start+ ((bntCnt-1)*onePage)), end = (bntCnt*onePage)
+limit 5 offset (btncnt-1)*onePage 
+3번 누를때 : 11 - 15 => start = (start+ ((bntCnt-1)*onePage)) , end = (bntCnt*onePage)
+limit 5 offset (btncnt-1)*onePage 
+
+
