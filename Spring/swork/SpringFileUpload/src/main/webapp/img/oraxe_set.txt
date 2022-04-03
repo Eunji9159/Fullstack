@@ -1,0 +1,22 @@
+
+# Oracle XE 11g2 다운
+
+1. 오라클 xe 로 검색 -> 다운 사이트 링크 클릭
+www.oracle.com/technetwork/kr
+
+2.데이터베이스 : 
+Database 19c Enterprise/Standard Editions 선택
+
+3. 아래로 스크롤 Oracle Database Express Edition의 
+Oracle Database 11g Release 2 Express Edition for Windows 64 선택
+=> https://www.oracle.com/database/technologies/xe-prior-releases.html
+
+4. Oracle Database 11gR2 Express Edition for Windows x64 클릭하여 다운
+5. 동의 체크 후 로그인
+3. Oracle Database 11gR2 Express Edition for Windows x64 링크 클릭
+5. OracleXE112_Win64.zip 다운
+
+6. 압축 해제 후 DISK1 폴더의 setup.exe 실행
+
+7. SYS, SYSTEM의 패스워드를 1234로 설정
+>>설치 완료 후 finish

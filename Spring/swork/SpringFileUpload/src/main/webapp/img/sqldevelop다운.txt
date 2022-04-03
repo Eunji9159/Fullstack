@@ -1,0 +1,45 @@
+
+# SQL Developer 다운
+
+- www.oracle.com/downloads
+아래로 스크롤 내려서 나오는
+- Developer Tools - SQL Developer 선택
+- 20.2버전이 나올때까지 Previous Version 계속 클릭
+https://www.oracle.com/tools/downloads/sqldev-downloads-202.html
+- SQL Developer 20.2 Downloads
+  - Windows 32-bit/64-bit
+  - Download (413 MB) 클릭
+  (www.oracle.com/tools/downloads/sqldev-downloads.html)
+
+- Oracle License Agreement
+  - Agreement 체크
+  - Download sqldeveloper-20.2.xx-x64.zip 클릭
+
+- 통합 인증 - 로그인
+
+
+
+# SQL Developer 설치
+
+- sqldeveloper-20.2.0.175.1842-no-jre.zip 파일을
+  D:\ 에 압축 해제
+
+- D:\sqldeveloper 폴더의 sqldeveloper.exe 파일 실행
+
+- JDK 설치 위치 대화상자
+  - Browse... 클릭 - C:\Java\jdk1.8.0_261 로 설정 - OK
+
+- 이전 환경설정 임포트 - 아니오
+
+- 'Oracle로 사용 보고 보내기 허용' 체크 해제 - 확인
+
+- 시작 페이지 탭 닫기
+
+- 접속 창 - 'Oracle 접속' 위에서 마우스 우버튼
+  - 새 데이터베이스 접속
+    -- Name: lion
+    -- 사용자 이름(U): lion
+    -- 비밀번호(P): 1234
+    -- 테스트 (상태: 성공)
+  - 접속
+
